@@ -3,7 +3,8 @@ import { RouterModule } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 
 import { ComponentsModule } from './components/components.module'
-import { AppComponent } from './app.component'
+import { AppComponent } from './app.component';
+import { LoginComponent } from './auth/login/login.component'
 
 const routes = [
   {
@@ -14,7 +15,7 @@ const routes = [
 ]
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ],
   imports: [BrowserModule, RouterModule.forRoot(routes), ComponentsModule],
   providers: [],
   bootstrap: [AppComponent],

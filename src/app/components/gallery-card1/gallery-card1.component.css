@@ -19,10 +19,12 @@
   margin-top: var(--dl-space-space-halfunit);
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
+  font-size: xxx-large;
 }
 .gallery-card1-text1 {
   color: #595959;
   align-self: flex-start;
+  font-size: xx-large;
 }
 
 

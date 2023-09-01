@@ -1,4 +1,6 @@
 
 export const environment = {
-  production: true
+  production: true,
+  API_URL: 'https://wo-fifa.azurewebsites.net/',
+
 };
