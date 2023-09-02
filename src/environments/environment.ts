@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'https://wo-fifa.azurewebsites.net/',
+  API_URL: 'https://wo-fifa.azurewebsites.net/equipos',
 };
 
 /*

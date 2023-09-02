@@ -1,15 +1,15 @@
-<div class="gallery-card1-gallery-card" [ngClass]="rootClassName">
+<div class="gallery-card1-gallery-card rootClassName">
   <!-- <img
     [attr.alt]="image_alt"
     [attr.src]="image_src"
     class="gallery-card1-image"
   /> -->
-  <h2 class="gallery-card1-text">{{ name }}</h2>
-  <span class="gallery-card1-text1">{{ estadio }}</span>
-  <span class="gallery-card1-text1">{{ web }}</span>
-  <span class="gallery-card1-text1">{{ nacionalidad }}</span>
-  <span class="gallery-card1-text1">{{ fecha }}</span>
-  <span class="gallery-card1-text1">{{ entrenador }}</span>
-  <span class="gallery-card1-text1">{{ capacidad }}</span>
-  <span class="gallery-card1-text1">{{ valor }}</span>
+  <h2 class="gallery-card1-text">{{ equipo?.nombre }}</h2>
+  <span class="gallery-card1-text1">{{ equipo?.estadio }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.sitioWeb }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.nacionalidad }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.fundacion }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.entrenador }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.capacidad }}</span>
+  <span class="gallery-card1-text1">{{ equipo?.valor }}</span>
 </div>

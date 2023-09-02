@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
+import { Equipo, EquiposLista } from '../types/types';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,28 @@ export class ServicesService {
 
   constructor(private httpClient: HttpClient,) { }
 
-  public getEquipos(): Observable<any> {
-    return this.httpClient.get(`${this.baseUrl}equipos/listar/0/100`);
+  public getEquipos(page: number = 0): Observable<EquiposLista> { 
+    const endpointUrl = `${this.baseUrl}/listar/${page}/9`;
+    return this.httpClient.get<EquiposLista>(endpointUrl);
+  }
+
+  public getEquipoById(id: number): Observable<Equipo> { 
+    const endpointUrl = `${this.baseUrl}/consultar/${id}`;
+    return this.httpClient.get<Equipo>(endpointUrl);
+  }
+
+  public postEquipos(equipo : Equipo): Observable<any> { 
+    const endpointUrl = `${this.baseUrl}/crear`;
+    return this.httpClient.post(endpointUrl,equipo);
+  }
+
+  public putEquipos(equipo : Equipo): Observable<any> { 
+    const endpointUrl = `${this.baseUrl}/actualizar/${equipo.id} `;
+    return this.httpClient.put(endpointUrl,equipo);
+  }
+  public deleteEquipos(id : number): Observable<any> { 
+    const endpointUrl = `${this.baseUrl}/eliminar/${id} `;
+    return this.httpClient.delete(endpointUrl);
   }
 
 }

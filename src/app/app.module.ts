@@ -5,6 +5,10 @@ import { BrowserModule } from '@angular/platform-browser'
 import { ComponentsModule } from './components/components.module'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component'
+import { ServicesService } from './services/services.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 const routes = [
   {
@@ -15,9 +19,11 @@ const routes = [
 ]
 
 @NgModule({
-  declarations: [AppComponent, ],
-  imports: [BrowserModule, RouterModule.forRoot(routes), ComponentsModule],
-  providers: [],
+  declarations: [AppComponent,  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes), ComponentsModule, HttpClientModule, FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [ServicesService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
