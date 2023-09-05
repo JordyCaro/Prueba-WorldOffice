@@ -1,0 +1,22 @@
+<div class="home-section32">
+    <div class="home-container09">
+        <div class="home-contact2">
+            <h2 class="home-text20">Eliminar Equipo</h2>
+        </div>
+        <form [formGroup]="deleteEquipoForm">
+            <div class="home-form2">
+                <label for="buscarEquipo" class="home-text12 TextXS">Buscar Equipo</label>
+                <div class="input-group">
+                    <input formControlName="id" type="text" id="buscarEquipo" placeholder="Buscar únicamente por ID"
+                        class="home-textinput08 TextSM input" />
+                    <button [disabled]="!deleteEquipoForm.valid" (click)="getEquipoById()" class="home-button">Buscar</button>
+                </div>
+                <gallery-card1 *ngIf="equipo" rootClassName="rootClassName"[equipo]="equipo"></gallery-card1>
+                <div class="home-container12">
+                    <secondary-button (click)="deleteEquipos()" button="ELIMINAR"
+                        rootClassName="secondary-button-root-class-name3"></secondary-button>
+                </div>
+            </div>
+        </form>
+        <img alt="image" src="/assets/gray-vector.svg" class="home-image4" />
+    </div>

@@ -1,0 +1,14 @@
+<div *ngIf="equiposLista?.content.length > 0" class="home-section1">
+    <div class="home-container03"><div class="home-container04"></div></div>
+    
+    <div  class="home-gallery">
+      <gallery-card1 *ngFor="let item of equiposLista?.content" rootClassName="rootClassName"[equipo]="item"></gallery-card1>
+    </div>
+    <div class="pagination custom-pag">
+      <button  class="card shadow margin" (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1"> < </button>
+      <ng-container *ngFor="let page of pageNumbers()">
+        <button class="card shadow margin" (click)="onPageChange(page)" [disabled]="currentPage === page">{{ page }}</button>
+      </ng-container>
+      <button  class="card shadow margin" (click)="onPageChange(currentPage + 1)"> > </button>
+    </div>
+  </div>

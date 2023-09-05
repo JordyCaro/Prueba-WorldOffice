@@ -7,7 +7,15 @@
       <img alt="image" src="/assets/white-vector.svg" class="home-image1" />
     </div>
   </div>
-  <div *ngIf="equiposLista?.content.length > 0" class="home-section1">
+  <nav>
+    <ul style="display: flex;">
+      <li><a routerLink="/lista-equipo">Lista Equipo</a></li>
+      <li><a routerLink="/editar-equipo">Editar Equipo</a></li>
+      <li><a routerLink="/crear-equipo">Crear Equipo</a></li>
+      <li><a routerLink="/eliminar-equipo">Eliminar Equipo</a></li>
+    </ul>
+  </nav>
+  <!-- <div *ngIf="equiposLista?.content.length > 0" class="home-section1">
     <div class="home-container03"><div class="home-container04"></div></div>
     
     <div  class="home-gallery">
@@ -20,11 +28,11 @@
       </ng-container>
       <button  class="card shadow margin" (click)="onPageChange(currentPage + 1)"> > </button>
     </div>
-  </div>
+  </div> -->
 
 
 
-  <div class="home-section3">
+  <!-- <div class="home-section3">
     <div class="home-container05">
       <form [formGroup]="createEquipoForm">
       <div class="home-contact">
@@ -97,9 +105,9 @@
     </form>
     </div>
     <img alt="image" src="/assets/gray-vector.svg" class="home-image2" />
-  </div>
+  </div> -->
 
-  <div class="home-section31">
+  <!-- <div class="home-section31">
     <div class="home-container07">
       <form [formGroup]="editEquipoForm">
         <div class="home-contact1">
@@ -183,10 +191,10 @@
       </form>
       <img alt="image" src="/assets/gray-vector.svg" class="home-image3" />
     </div>
-  </div>
+  </div> -->
   
 
-  <div class="home-section32">
+  <!-- <div class="home-section32">
     <div class="home-container09">
       <div class="home-contact2">
         <h2 class="home-text20">Eliminar Equipo</h2>
@@ -209,7 +217,7 @@
       </div>
     </div>
     <img alt="image" src="/assets/gray-vector.svg" class="home-image4" />
-  </div>
+  </div> -->
   <div class="home-section33">
     <div class="home-container11">
       <div class="home-contact3">

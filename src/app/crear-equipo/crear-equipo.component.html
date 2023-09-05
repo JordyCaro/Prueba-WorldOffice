@@ -1,0 +1,74 @@
+<div class="home-section3">
+    <div class="home-container05">
+      <form [formGroup]="createEquipoForm">
+      <div class="home-contact">
+        <h2 class="home-text01">Registra un Equipo Nuevo</h2>
+      </div>
+      <div class="home-form">
+        <span class="home-text02 TextXS">Nombre</span>
+        <input
+          formControlName="nombre"
+          type="text"
+          placeholder="Nombre"
+          class="home-textinput TextSM input"
+        />
+        <span class="home-text03 TextXS">Estadio</span>
+        <input
+          formControlName="estadio"
+          type="text"
+          placeholder="Estadio"
+          class="home-textinput01 TextSM input"
+        />
+        <span class="home-text04 TextXS">Web</span>
+        <input
+          formControlName="sitioWeb"
+          type="text"
+          placeholder="Sitio Web"
+          class="home-textinput02 TextSM input"
+        />
+        <span class="home-text05 TextXS">Nacionalidad</span>
+        <input
+          formControlName="nacionalidad"
+          type="text"
+          placeholder="Nacionalidad"
+          class="home-textinput03 TextSM input"
+        />
+        <span class="home-text06 TextXS">Fecha de fundacion</span>
+        <input
+          formControlName="fundacion"
+          type="date"
+          placeholder="Fecha de Fundacion"
+          class="home-textinput04 TextSM input"
+        />
+        <span class="home-text07 TextXS">Entrenador</span>
+        <input
+          formControlName="entrenador"
+          type="text"
+          placeholder="Entrenador"
+          class="home-textinput05 TextSM input"
+        />
+        <span class="home-text08 TextXS">
+          Capacidad de asistentes en el estadio
+        </span>
+        <input
+          formControlName="capacidad"
+          type="text"
+          placeholder="Capacidad del Estadio"
+          class="home-textinput06 TextSM input"
+        />
+        <span class="home-text09 TextXS">Valor</span>
+        <input
+          formControlName="valor"
+          type="text"
+          placeholder="Valor"
+          class="home-textinput07 TextSM input"
+        />
+        <div class="home-container12">
+            <secondary-button [disabled]="!createEquipoForm.valid" (click)="submitForm()" button="CREAR"
+                rootClassName="secondary-button-root-class-name3"></secondary-button>
+        </div>
+      </div>
+    </form>
+    </div>
+    <img alt="image" src="/assets/gray-vector.svg" class="home-image2" />
+  </div>

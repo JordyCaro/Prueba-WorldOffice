@@ -1,1 +1,23 @@
-<router-outlet></router-outlet>
+<div class="home-container">
+    <div class="home-hero">
+        <div class="home-bg"></div>
+        <div class="home-container01">
+            <div class="home-container02">
+                <h1 class="home-text">FIFA</h1>
+            </div>
+            <img alt="image" src="/assets/gray-vector.svg" class="home-image" />
+            <img alt="image" src="/assets/white-vector.svg" class="home-image1" />
+        </div>
+    </div>
+    <nav>
+        <ul style="display: flex;">
+            <li><a routerLink="/lista-equipo">Lista Equipo</a></li>
+            <li><a routerLink="/editar-equipo">Editar Equipo</a></li>
+            <li><a routerLink="/crear-equipo">Crear Equipo</a></li>
+            <li><a routerLink="/eliminar-equipo">Eliminar Equipo</a></li>
+        </ul>
+    </nav>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
+

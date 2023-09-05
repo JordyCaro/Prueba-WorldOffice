@@ -1,0 +1,45 @@
+<div class="home-section31">
+    <div class="home-container07">
+        <form [formGroup]="editEquipoForm">
+            <div class="home-contact1">
+                <h2 class="home-text10">Edita tu Equipo</h2>
+            </div>
+            <div class="home-form1">
+                <label for="buscarEquipo" class="home-text12 TextXS">Buscar Equipo</label>
+                <div class="input-group">
+                    <input formControlName="id" type="text" id="buscarEquipo" placeholder="Buscar únicamente por ID"
+                        class="home-textinput08 TextSM input" />
+                    <button (click)="getEquipoById()" class="home-button">Buscar</button>
+                </div>
+                <span class="home-text12 TextXS">Nombre</span>
+                <input formControlName="nombre" type="text" placeholder="Nombre"
+                    class="home-textinput08 TextSM input" />
+                <span class="home-text13 TextXS">Estadio</span>
+                <input formControlName="estadio" type="text" placeholder="Estadio"
+                    class="home-textinput09 TextSM input" />
+                <span class="home-text14 TextXS">Web</span>
+                <input formControlName="sitioWeb" type="text" placeholder="Sitio Web"
+                    class="home-textinput10 TextSM input" />
+                <span class="home-text15 TextXS">Nacionalidad</span>
+                <input formControlName="nacionalidad" type="text" placeholder="Nacionalidad"
+                    class="home-textinput11 TextSM input" />
+                <span class="home-text16 TextXS">Fecha de fundación</span>
+                <input formControlName="fundacion" type="date" placeholder="Fecha de Fundación"
+                    class="home-textinput12 TextSM input" />
+                <span class="home-text17 TextXS">Entrenador</span>
+                <input formControlName="entrenador" type="text" placeholder="Entrenador"
+                    class="home-textinput13 TextSM input" />
+                <span class="home-text18 TextXS">Capacidad de asistentes en el estadio</span>
+                <input formControlName="capacidad" type="text" placeholder="Capacidad del Estadio"
+                    class="home-textinput14 TextSM input" />
+                <span class="home-text19 TextXS">Valor</span>
+                <input formControlName="valor" type="text" placeholder="Valor" class="home-textinput15 TextSM input" />
+                <div class="home-container12">
+                    <secondary-button [disabled]="!editEquipoForm.valid" (click)="editEquipo(); clearForm()" button="EDITAR"
+                        rootClassName="secondary-button-root-class-name3"></secondary-button>
+                </div>
+            </div>
+        </form>
+        <img alt="image" src="/assets/gray-vector.svg" class="home-image3" />
+    </div>
+</div>
